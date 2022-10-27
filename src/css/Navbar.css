@@ -1,0 +1,139 @@
+
+
+ * {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 60;
+    background: rgb(33 37 41);
+    background: black;
+    /* background: rgba(0, 128, 0, 0); */
+    display: flex;
+    min-height: 25px;
+    height: fit-content;
+    /* box-shadow: 2px 2px 2px white; */
+}
+
+.title {
+    display: flex;
+    color: white;
+    margin-right: 20px;
+    /* width: 100%; */
+    height: fit-content;
+    cursor: pointer;
+    margin-left: 5rem;
+}
+
+.title img {
+    width: 50px;
+}
+
+.bar {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    /* padding-inline: 10px; */
+    border-radius: 5px;
+    color: white;
+    font-size: 2.5rem;
+    visibility: hidden;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 20px;
+    font-stretch: extra-expanded;
+}
+
+.navul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: 1s; */
+    margin: 0;
+}
+
+.navli{
+    list-style: none;
+    margin-right: 2rem;
+    font-size: large;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a:hover{
+    color: white;
+}
+
+.login {
+    position: absolute;
+    width: fit-content;
+    right: 0;
+}
+
+.login *{
+    margin-right: 10px;
+}
+
+
+
+.active {
+    color: white;
+}
+
+
+@media screen and (max-width: 800px) {
+    nav {
+        display: block;
+        height: fit-content;
+        min-height: 50px;
+    }
+
+    .title{
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .title img{
+        margin-left:0;
+        left: 0;
+    }
+
+    .bar {
+        visibility: visible;
+    }
+
+    .navul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navli{
+        margin-bottom: 0.5rem;
+        /* text-align: center; */
+        font-size: large;
+        margin-right: 0;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        width: 100%;
+    }
+
+    .login *{
+        margin-top: 10px;
+        width: fit-content;
+        height: fit-content;
+    }
+}

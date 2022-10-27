@@ -1,0 +1,98 @@
+@keyframes liveblink{
+    from{
+        color:black;
+        visibility: hidden;
+    }
+    to{
+        color: red;
+    }
+}
+
+.mainleader{
+    width: 70%;
+    background: black;
+    display: flex;
+    align-self: center;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.mainleader table {
+    width: 100%;
+    border: 2px solid white;
+
+}
+
+table{
+    position: relative;
+}
+table caption{
+    color: white;
+}
+
+table,th,td{
+    border:  1px solid white;
+    border-collapse:collapse ;
+}
+
+.live{
+    position: absolute;
+    color:red;
+    animation-name: liveblink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-size: large;
+}
+
+thead tr{
+    /* position: fixed; */
+    background:black !important ;
+}
+thead th{
+    border: 2px solid white !important;
+    color: white;
+
+}
+
+td{
+    text-align: center;
+}
+
+tr{
+    height: 35px;
+}
+
+tr:nth-child(odd){
+    background: #ed9999;
+    /* background: black; */
+    color: white;
+    color: black;
+}
+
+tr:nth-child(even){
+    background:white;
+    background:black;
+    color: black;
+    color: #ed9999;
+}
+
+
+tr:nth-child(1){
+    background: linear-gradient(90deg,#b27d00,#fefbbf,#b27d00);
+}
+tr:nth-child(2){
+    background: linear-gradient(90deg,#e1e1e1,#afafaf,#e1e1e1);
+    color: black;
+
+}
+
+tr:nth-child(3){
+    background: linear-gradient(90deg,#b88556,#e8be85 ,#b88556);
+}
+
+@media screen and (max-width:800px) {
+    .mainleader{
+        width:99%;
+    }
+    
+}

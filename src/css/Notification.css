@@ -1,0 +1,79 @@
+@keyframes pro-bar-anim {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+
+@keyframes hide-noti {
+    0%{
+        right: 0;
+    }
+    99%{
+        right: -1000px;
+    }
+    100%{
+    }
+}
+
+
+.notify {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    background: white;
+    color: black;
+    height: fit-content;
+    width: fit-content;
+    visibility: hidden;
+    border-radius: 10px 0 0 10px;
+    z-index: 10;
+    margin-top: 10px;
+    overflow-x: hidden;
+}
+
+.show-noti {
+    width: fit-content;
+}
+
+.success {
+    color: green;
+    animation-name: hide-noti;
+    animation-duration: 1s;
+    animation-delay: 2s;
+}
+
+.error {
+    color: red;
+    animation-name: hide-noti;
+    animation-duration: 1s;
+    animation-delay: 2s;
+}
+
+#success {
+    background: green;
+}
+
+#error {
+    background: red;
+}
+
+.pro-bar {
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    left: 0;
+    height: 3px;
+    animation-name: pro-bar-anim;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+
+}

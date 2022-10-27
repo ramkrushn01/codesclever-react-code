@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.subdiv {
+    /* margin-top: 50px; */
+    position: relative;
+    /* top:0; */
+    /* z-index: 3; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #201ff1; */
+    /* background: linear-gradient(224deg,#6973ef,#0d1158); */
+    /* background: linear-gradient(224deg,#500d58,#212529); */
+    /* background: linear-gradient(224deg,#FEE715FF,#101820FF); */
+    background: #1a1a1d;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px red;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-blend-mode: color;
+    /* opacity: 0.5; */
+
+}
+
+img {
+    position: relative;
+    /* top: -100%; */
+    /* align-self: center; */
+    width: 300px;
+    left: 25%;
+    /* right: 0 !important; */
+}
+
+.regbtn {
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    width: fit-content;
+    padding: 10px;
+    align-self: center;
+    border-radius: 10px;
+    top: 40%;
+    background: #0e111196;
+    background: linear-gradient(90deg, #b27d00, #fefbbf, #b27d00);
+    background: linear-gradient(90deg, #e1e1e1, #afafaf, #e1e1e1);
+    background: linear-gradient(90deg,#b88556,#e8be85 ,#b88556);
+    background: #202746;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    /* border: 2px solid blue; */
+    font-weight: bolder;
+    box-shadow: inset 0 0 2px 3px white;
+    font-size: x-large;
+    text-shadow: 2px 2px 2px black;
+}
+
+.regbtn:hover {
+    /* background: linear-gradient(90deg, #afafaf, #e1e1e1, #afafaf); */
+    box-shadow: 0 0 2px 3px black;
+}
+
+.textme {
+    position: relative;
+    /* left: 0 !important; */
+    /* top: 50%; */
+    box-shadow: 2px 2px 2px black;
+    align-self: center;
+    color: wheat;
+    border: 2px solid white;
+    background: white;
+    height: fit-content;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.textme:hover {
+    background: white;
+    color: black;
+    border-color: black;
+
+}
+
+@media screen and (max-width:800px) {
+    .subdiv {
+        flex-direction: column;
+    }
+
+    img {
+        width: 350px;
+        /* top: 0; */
+        /* left: 0; */
+    }
+
+    .textme {
+        margin: 24px;
+        top: 15%;
+        border-top: black 10px solid;
+    }
+
+    .regbtn {
+        top: 35%;
+    }
+
+
+}
