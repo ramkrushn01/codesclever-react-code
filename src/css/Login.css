@@ -3,13 +3,48 @@
     justify-content: end;
     padding-right: 20px;
     align-items: center;
-    background: white;
-    color: black;
+    /* background: white; */
+    color: white;
     /* width: 70%; */
     height: 50%;
     border-radius: 10px;
     /* box-shadow: 0 0 20px rgb(30 215 96); */
     box-shadow: 0 0 20px white;
+
+    background-color: #1f2e43;
+    background: radial-gradient(
+            circle at 55% 92%,
+            #426691 0 12%,
+            transparent 12.2%
+        ),
+        radial-gradient(circle at 94% 72%, #426691 0 10%, transparent 10.2%),
+        radial-gradient(
+            circle at 20% max(78%, 350px),
+            #263a53 0 7%,
+            transparent 7.2%
+        ),
+        radial-gradient(circle at 0% 0%, #263a53 0 20%, transparent 10%),
+        rgba(20, 20, 20);
+
+    transition: 2s;
+    
+    border-radius: 10px 0 0 10px;
+}
+
+.loginside:hover {
+    background: radial-gradient(
+            circle at 55% 92%,
+            #426691 0 12%,
+            transparent 12.2%
+        ),
+        radial-gradient(circle at 94% 72%, #426691 0 10%, transparent 10.2%),
+        radial-gradient(
+            circle at 20% max(78%, 350px),
+            #263a53 0 7%,
+            transparent 7.2%
+        ),
+        radial-gradient(circle at 0% 0%, #263a53 10% 40%, transparent 10%),
+        rgba(20, 20, 20);
 }
 
 .noac {
@@ -23,7 +58,7 @@
     height: 50px;
     font-size: large;
     background: none;
-    color: black;
+    color: white;
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
@@ -31,8 +66,8 @@
 }
 
 .noac button:hover {
-    box-shadow: inset 0 50px 0 0 white;
-    color: black;
+    box-shadow: inset 0 50px 0 0 black;
+    color: white;
 }
 
 .login-main {
@@ -94,7 +129,7 @@
     color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
 }
-.link:hover{
+.link:hover {
     color: white;
 }
 

@@ -66,7 +66,17 @@ export default class Profile1 extends Component {
     };
 
     handleGetNotes = (e) =>{
-        this.setState({notiType:'success',notiMessage:'Get After Competition !'});
+        if(this.state.enroll){
+            this.setState({notiType:'success',notiMessage:'Get Notes After Competition !'});
+        }
+        else{
+            this.setState({notiType:'success',notiMessage:'Enroll and Get Notes After Competition !'});
+        }
+    }
+
+    handleAllReadyEnrolled = (e) => {
+        this.setState({notiType:''});
+        this.setState({notiType:'success',notiMessage:'Are You All Ready Enrolled!'});
     }
 
     render() {
@@ -148,7 +158,7 @@ export default class Profile1 extends Component {
                                         Enroll Now And Get Surprising Cash Prize
                                         And Beautiful Gifts !{" "}
                                     </p>
-                                    {this.state.enroll && <button>Enrolled</button>}
+                                    {this.state.enroll && <button onClick={this.handleAllReadyEnrolled} >Enrolled</button>}
                                     {!this.state.enroll && <button> <Link to="/payment" style={{color:'blue'}}> Enroll Now </Link></button>}
                                 </div>
                             </div>
