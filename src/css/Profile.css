@@ -20,6 +20,10 @@
     /* border-radius: 10px; */
 }
 
+.profileinfo p span{
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .editbtn {
     position: absolute;
     right: 0;

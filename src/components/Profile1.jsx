@@ -89,12 +89,12 @@ export default class Profile1 extends Component {
                     <div className="maindivprofile">
                         <div className="profileinfo">
                             <div className="left">
-                                <p>Name: {this.state.fullname}</p>
-                                <p>Email Address: {this.state.email}</p>
+                                <p>Name: <span> {this.state.fullname} </span> </p>
+                                <p>Email Address: <span> {this.state.email} </span> </p>
                             </div>
                             <div className="right">
-                                <p>Username: {this.state.username}</p>
-                                <p>Phone No: {this.state.phone}</p>
+                                <p>Username: <span> {this.state.username} </span>  </p>
+                                <p>Phone No: <span> {this.state.phone} </span> </p>
                             </div>
                             {/* <button className="editbtn"> */}
                                 <Link  to="/logout" className="editbtn">Logout</Link>
