@@ -29,6 +29,7 @@ import Savepromotoken from "./components/Savepromotoken";
 import Privacy from "./components/Privacy";
 import Contact from "./components/Contact";
 import Influence from "./components/Influence";
+import Thankyou from "./components/Thankyou";
 
 // import { webpack } from "webpack";
 // import webpack from './webpack.config';
@@ -209,6 +210,14 @@ function App() {
                         }
                     />
 
+                    <Route
+                        path="/thankyou"
+                        element={
+                            <>
+                                <Thankyou/>
+                            </>
+                        }
+                    />
                 </Routes>
                 <Footer />
             </BrowserRouter>

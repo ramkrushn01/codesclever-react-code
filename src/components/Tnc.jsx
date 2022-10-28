@@ -7,6 +7,7 @@ export default function Tnc(props) {
             className="tncMainDiv"
             style={props.home && { minHeight: "fit-content" }}>
             <div className="tnc">
+                <h1 className="thankyou" style={props.thankyou && { display: "block" }}>Thanks For Enrolling</h1>
                 <h4 data-aos="zoom-in-right">Terms and conditions</h4>
                 <p data-aos="zoom-in-left">About Competition</p>
                 <ul className="tncul" data-aos="fade-right">
