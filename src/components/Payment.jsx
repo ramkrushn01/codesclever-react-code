@@ -66,7 +66,7 @@ export default function Payment() {
 				setNotiType('success');
 				setNotiMessage('Payment Successful !');
 				setTimeout(()=>{
-					navigate('/tnc');
+					navigate('/thankyou');
 				},3000);
 				
             },
