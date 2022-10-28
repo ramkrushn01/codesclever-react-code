@@ -70,7 +70,7 @@ export default class Profile1 extends Component {
             this.setState({notiType:'success',notiMessage:'Get Notes After Competition !'});
         }
         else{
-            this.setState({notiType:'success',notiMessage:'Enroll and Get Notes After Competition !'});
+            this.setState({notiType:'success',notiMessage:'Enroll and Get Notes!'});
         }
     }
 
@@ -156,7 +156,10 @@ export default class Profile1 extends Component {
                                     </h2>
                                     <p>
                                         Enroll Now And Get Surprising Cash Prize
-                                        And Beautiful Gifts !{" "}
+                                        And Beautiful Gifts ! <br />
+                                        <br />
+                                        <strong> Fee: Rs: &#x20B9; 249(INR) </strong>
+                                        
                                     </p>
                                     {this.state.enroll && <button onClick={this.handleAllReadyEnrolled} >Enrolled</button>}
                                     {!this.state.enroll && <button> <Link to="/payment" style={{color:'blue'}}> Enroll Now </Link></button>}
