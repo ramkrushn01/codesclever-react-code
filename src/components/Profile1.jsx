@@ -76,7 +76,7 @@ export default class Profile1 extends Component {
 
     handleAllReadyEnrolled = (e) => {
         this.setState({notiType:''});
-        this.setState({notiType:'success',notiMessage:'Are You All Ready Enrolled!'});
+        this.setState({notiType:'success',notiMessage:'Are You Already Enrolled!'});
     }
 
     render() {
