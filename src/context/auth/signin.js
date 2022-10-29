@@ -2,7 +2,7 @@ import config from "../../config";
 
 const signin = async (props) => {
     const host = config().HOST;
-    const promotoken = localStorage.getItem("promoToken");
+    let promotoken = localStorage.getItem("promoToken");
 
     const response = await fetch(`${host}/api/auth/isvalidotp`, {
         method: "POST",
