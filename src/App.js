@@ -30,6 +30,7 @@ import Privacy from "./components/Privacy";
 import Contact from "./components/Contact";
 import Influence from "./components/Influence";
 import Thankyou from "./components/Thankyou";
+import Saveqna from "./components/Saveqna";
 
 // import { webpack } from "webpack";
 // import webpack from './webpack.config';
@@ -217,7 +218,19 @@ function App() {
                                 <Thankyou/>
                             </>
                         }
+                        
                     />
+                    
+                    <Route
+                        path="/saveqna"
+                        element={
+                            <>
+                                <Saveqna/>
+                            </>
+                        }
+                        
+                    />
+                    
                 </Routes>
                 <Footer />
             </BrowserRouter>
