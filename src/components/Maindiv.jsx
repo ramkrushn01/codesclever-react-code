@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Maindiv.css";
 import "../css/coding.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Maindiv() {
     const styleQ = {
@@ -89,7 +89,7 @@ export default function Maindiv() {
                     </div>
                 </div>
                 <h2 className="winner-quote">
-                    <p style={{color:"red"}}>Competition will start at 2'o Clock</p> 
+                    <Link to='/startexam'>Start Competition</Link><br />
                     <button className="rgbtn" onClick={()=>{navigator('/profile')}} >REGISTER NOW</button>
                 </h2>
             </div>
