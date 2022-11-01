@@ -31,6 +31,8 @@ import Contact from "./components/Contact";
 import Influence from "./components/Influence";
 import Thankyou from "./components/Thankyou";
 import Saveqna from "./components/Saveqna";
+import Startexam from "./components/Startexam";
+import Exam from "./components/Exam";
 
 // import { webpack } from "webpack";
 // import webpack from './webpack.config';
@@ -215,22 +217,45 @@ function App() {
                         path="/thankyou"
                         element={
                             <>
-                                <Thankyou/>
+                                <Thankyou />
                             </>
                         }
-                        
                     />
-                    
+
+                    <Route
+                        path="/startexam"
+                        element={
+                            <>
+                                <Startexam />
+                            </>
+                        }
+                    />
+
                     <Route
                         path="/saveqna"
                         element={
                             <>
-                                <Saveqna/>
+                                <Saveqna />
                             </>
                         }
-                        
                     />
-                    
+
+                    <Route
+                        path="/exam"
+                        element={
+                            <>
+                                <Exam/>
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/exam/:param"
+                        element={
+                            <>
+                                <Exam/>
+                            </>
+                        }
+                    />
                 </Routes>
                 <Footer />
             </BrowserRouter>

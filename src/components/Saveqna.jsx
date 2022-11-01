@@ -10,7 +10,7 @@ export default function Saveqna() {
     const cRef = useRef();
     const dRef = useRef();
     const ansRef = useRef();
-    const [qn,setQn] = useState(13);
+    const [qn,setQn] = useState(55);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -52,7 +52,7 @@ export default function Saveqna() {
         <div style={stl}>
             <form onSubmit={handleSubmit} style={stl}>
             <input type="number" ref={queNRef} value={qn} onChange={(e)=> e.target.value = qn} readonly />
-            <input type="text" ref={queRef} placeholder='question' required />
+            <textarea ref={queRef} placeholder='question' required cols="30" rows="10"></textarea>
             <input type="text" ref={aRef} placeholder='a' required />
             <input type="text" ref={bRef} placeholder='b' required />
             <input type="text" ref={cRef} placeholder='c' required />

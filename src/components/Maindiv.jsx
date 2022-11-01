@@ -89,8 +89,7 @@ export default function Maindiv() {
                     </div>
                 </div>
                 <h2 className="winner-quote">
-                    {/* <span>Top 100 Winner </span>  will be get Special <span>CODESCLEVER</span> Gift Hamper
-                    delivered at their <span >DORESTEP</span> */}
+                    <p style={{color:"red"}}>Competition will start at 2'o Clock</p> 
                     <button className="rgbtn" onClick={()=>{navigator('/profile')}} >REGISTER NOW</button>
                 </h2>
             </div>

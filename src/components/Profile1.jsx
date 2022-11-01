@@ -101,6 +101,7 @@ export default class Profile1 extends Component {
                             <div className="left">
                                 <p>Name: <span> {this.state.fullname} </span> </p>
                                 <p>Email Address: <span> {this.state.email} </span> </p>
+                                <Link  to="/startexam" >Start Competition</Link>
                             </div>
                             <div className="right">
                                 <p>Username: <span> {this.state.username} </span>  </p>
