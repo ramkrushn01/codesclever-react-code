@@ -26,7 +26,7 @@ export default function Updateboard() {
                 <br />
                 <input type="text" ref={marksRef} placeholder="marks" required/>
                 <br />
-                <input type="text" ref={timeRef} placeholder="MM:SS" required/>
+                <input type="text" ref={timeRef} placeholder="MM.SS" required/>
                 <br />
                 <button>update</button>
             </form>

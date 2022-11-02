@@ -38,20 +38,16 @@ export default function Leaderbord() {
                     <tbody>
                         {/* {eachrow} */}
                         {/* <Getlivedata/> */}
-                        {/* {data.map((ele, index) => {
+                        {data.map((ele, index) => {
                             return (
                                 <tr data-aos="zoom-out-right" key={ele.email}>
                                     <td>{index + 1}</td>
                                     <td>{ele.email.split("@")[0]}</td>
                                     <td>{ele.marks}</td>
-                                    <td>
-                                        {new Date(
-                                            ele.timeRequired
-                                        ).getMinutes()}
-                                    </td>
+                                    <td>{ele.timeRequired}</td>
                                 </tr>
                             );
-                        })} */}
+                        })}
                     </tbody>
                 </table>
             </div>
