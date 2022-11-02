@@ -33,6 +33,7 @@ import Thankyou from "./components/Thankyou";
 import Saveqna from "./components/Saveqna";
 import Startexam from "./components/Startexam";
 import Exam from "./components/Exam";
+import Updateboard from "./components/Updateboard";
 
 // import { webpack } from "webpack";
 // import webpack from './webpack.config';
@@ -244,7 +245,7 @@ function App() {
                         path="/exam"
                         element={
                             <>
-                                <Exam/>
+                                <Exam />
                             </>
                         }
                     />
@@ -252,7 +253,16 @@ function App() {
                         path="/exam/:param"
                         element={
                             <>
-                                <Exam/>
+                                <Exam />
+                            </>
+                        }
+                    />
+
+                    <Route
+                        path="/liveupdate"
+                        element={
+                            <>
+                                <Updateboard />
                             </>
                         }
                     />
