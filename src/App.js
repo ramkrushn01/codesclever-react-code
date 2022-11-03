@@ -129,14 +129,14 @@ function App() {
                             </>
                         }
                     />
-                    <Route
+                    {/* <Route
                         path="/payment"
                         element={
                             <>
                                 <Payment />
                             </>
                         }
-                    />
+                    /> */}
                     <Route
                         path="/logout"
                         element={
@@ -223,14 +223,7 @@ function App() {
                         }
                     />
 
-                    <Route
-                        path="/startexam"
-                        element={
-                            <>
-                                <Startexam />
-                            </>
-                        }
-                    />
+
 
                     <Route
                         path="/saveqna"
@@ -240,7 +233,7 @@ function App() {
                             </>
                         }
                     />
-
+{/* 
                     <Route
                         path="/exam"
                         element={
@@ -256,7 +249,7 @@ function App() {
                                 <Exam />
                             </>
                         }
-                    />
+                    /> */}
 
                     <Route
                         path="/liveupdate"

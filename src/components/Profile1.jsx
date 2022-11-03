@@ -23,7 +23,8 @@ export default class Profile1 extends Component {
             user: 0,
             notiMessage: "",
             notiType: "succeess",
-            enroll : false
+            enroll : false,
+            marks:null
         };
 
         this.cartRef = createRef();
@@ -42,6 +43,7 @@ export default class Profile1 extends Component {
                     this.setState({ username: res.email.split("@")[0] });
                     this.setState({ phone: res.phone });
                     this.setState({enroll:res.enroll });
+                    this.setState({marks:res.marks})
                 }
                 this.setState({ user: this.context.loggedInUser });
             });
@@ -101,7 +103,8 @@ export default class Profile1 extends Component {
                             <div className="left">
                                 <p>Name: <span> {this.state.fullname} </span> </p>
                                 <p>Email Address: <span> {this.state.email} </span> </p>
-                                <Link  to="/startexam" >Start Competition</Link>
+                                {this.state.marks&&<p>Marks: <span> {this.state.marks} </span></p>}
+                                
                             </div>
                             <div className="right">
                                 <p>Username: <span> {this.state.username} </span>  </p>
@@ -163,7 +166,7 @@ export default class Profile1 extends Component {
                                         
                                     </p>
                                     {this.state.enroll && <button onClick={this.handleAllReadyEnrolled} >Enrolled</button>}
-                                    {!this.state.enroll && <button> <Link to="/payment" style={{color:'blue'}}> Enroll Now </Link></button>}
+                                    {!this.state.enroll && <button> Competition over</button>}
                                 </div>
                             </div>
                         </div>
