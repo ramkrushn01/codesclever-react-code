@@ -42,7 +42,7 @@ export default function Leaderbord() {
                             return (
                                 <tr data-aos="zoom-out-right" key={ele.email}>
                                     <td>{index + 1}</td>
-                                    <td>{ele.email.split("@")[0]}</td>
+                                    <td>{ele.email.split("@")[0].toUpperCase()}</td>
                                     <td>{ele.marks}</td>
                                     <td>{ele.timeRequired}</td>
                                 </tr>
