@@ -1,12 +1,18 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
+import { useContext } from "react";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import saverewardform from "../context/auth/saverewardform";
 import "../css/Rewardform.css";
 import Notification from "./Notification";
+import authContext from "../context/auth/authContext";
 
 export default function Rewardform() {
+    const context = useContext(authContext);
+    const { logoutUser, loggedInUser } = context;
+
     const officialNameRef = useRef();
     const emailRef = useRef();
     const contactRef = useRef();
@@ -49,6 +55,13 @@ export default function Rewardform() {
         }
         //
     };
+
+    useEffect(() => {
+        if (!loggedInUser) {
+            navigate("/profile");
+        }
+    }, []);
+
     return (
         <>
             <Notification type={notiType} message={notiMessage} />
