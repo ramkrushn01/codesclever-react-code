@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import Logout from "./Logout";
 import { AiOutlinePoweroff } from "react-icons/ai";
 
-
 export default class Profile1 extends Component {
     static contextType = authContext;
 
@@ -23,11 +22,12 @@ export default class Profile1 extends Component {
             user: 0,
             notiMessage: "",
             notiType: "succeess",
-            enroll : false,
-            marks:null
+            enroll: false,
+            marks: null,
         };
 
         this.cartRef = createRef();
+        this.cartRef0 = createRef();
         this.cartRef1 = createRef();
     }
 
@@ -35,29 +35,40 @@ export default class Profile1 extends Component {
     componentDidMount() {
         if (this.context.loggedInUser) {
             const resp = getuserinfo();
-            
+
             resp.then((res) => {
                 if (res) {
                     this.setState({ fullname: res.fullname });
                     this.setState({ email: res.email });
                     this.setState({ username: res.email.split("@")[0] });
                     this.setState({ phone: res.phone });
-                    this.setState({enroll:res.enroll });
-                    this.setState({marks:res.marks})
+                    this.setState({ enroll: res.enroll });
+                    this.setState({ marks: res.marks });
                 }
                 this.setState({ user: this.context.loggedInUser });
             });
         }
     }
 
+    // for notes
     handleMouseOnCart = (e) => {
-
         this.cartRef.current.className += " cart-zoom";
     };
 
     handleMouseLeave = (e) => {
         this.cartRef.current.className = "cart-1 ";
     };
+
+    // for get gifts
+    handleMouseOnCart0 = (e) => {
+        this.cartRef0.current.className += " cart-zoom";
+    };
+
+    handleMouseLeave0 = (e) => {
+        this.cartRef0.current.className = "cart-1 ";
+    };
+
+    // for competition
 
     handleMouseOnCart1 = (e) => {
         this.cartRef1.current.className += " cart-zoom cart-zoom-1";
@@ -67,19 +78,27 @@ export default class Profile1 extends Component {
         this.cartRef1.current.className = "cart-1";
     };
 
-    handleGetNotes = (e) =>{
-        if(this.state.enroll){
-            this.setState({notiType:'success',notiMessage:'Get Notes After Competition !'});
+    handleGetNotes = (e) => {
+        if (this.state.enroll) {
+            this.setState({
+                notiType: "success",
+                notiMessage: "Get Notes After Competition !",
+            });
+        } else {
+            this.setState({
+                notiType: "success",
+                notiMessage: "Enroll and Get Notes!",
+            });
         }
-        else{
-            this.setState({notiType:'success',notiMessage:'Enroll and Get Notes!'});
-        }
-    }
+    };
 
     handleAllReadyEnrolled = (e) => {
-        this.setState({notiType:''});
-        this.setState({notiType:'success',notiMessage:'Are You Already Enrolled!'});
-    }
+        this.setState({ notiType: "" });
+        this.setState({
+            notiType: "success",
+            notiMessage: "Are You Already Enrolled!",
+        });
+    };
 
     render() {
         if (this.context.loggedInUser) {
@@ -101,17 +120,32 @@ export default class Profile1 extends Component {
                     <div className="maindivprofile">
                         <div className="profileinfo">
                             <div className="left">
-                                <p>Name: <span> {this.state.fullname} </span> </p>
-                                <p>Email Address: <span> {this.state.email} </span> </p>
-                                {this.state.marks&&<p>Marks: <span> {this.state.marks} </span></p>}
-                                
+                                <p>
+                                    Name: <span> {this.state.fullname} </span>{" "}
+                                </p>
+                                <p>
+                                    Email Address:{" "}
+                                    <span> {this.state.email} </span>{" "}
+                                </p>
+                                {this.state.marks && (
+                                    <p>
+                                        Marks: <span> {this.state.marks} </span>
+                                    </p>
+                                )}
                             </div>
                             <div className="right">
-                                <p>Username: <span> {this.state.username} </span>  </p>
-                                <p>Phone No: <span> {this.state.phone} </span> </p>
+                                <p>
+                                    Username:{" "}
+                                    <span> {this.state.username} </span>{" "}
+                                </p>
+                                <p>
+                                    Phone No: <span> {this.state.phone} </span>{" "}
+                                </p>
                             </div>
                             {/* <button className="editbtn"> */}
-                                <Link  to="/logout" className="editbtn">Logout</Link>
+                            <Link to="/logout" className="editbtn">
+                                Logout
+                            </Link>
                             {/* </button> */}
                         </div>
 
@@ -123,13 +157,12 @@ export default class Profile1 extends Component {
                                     className="cart-1"
                                     ref={this.cartRef}
                                     onMouseEnter={this.handleMouseOnCart}
-                                    onMouseLeave={this.handleMouseLeave}
-                                    
-                                    >
+                                    onMouseLeave={this.handleMouseLeave}>
                                     <img
                                         src="/images/reward-cart-img.png"
                                         alt="rewarad by codes clever"
-                                     data-aos="fade-left"/>
+                                        data-aos="fade-left"
+                                    />
                                     <h2 className="cart-head">
                                         Handwritten Notes
                                     </h2>
@@ -137,8 +170,39 @@ export default class Profile1 extends Component {
                                         Get Now Python Handwritten Notes By
                                         Codes Clever !
                                     </p>
-                                    <button className="getBtn" onClick={this.handleGetNotes}>Get Now</button>
+                                    <button
+                                        className="getBtn"
+                                        onClick={this.handleGetNotes}>
+                                        Get Now
+                                    </button>
                                 </div>
+
+                                {/* reward 2 */}
+                                {this.state.marks > 46 && (
+                                    <div
+                                        className="cart-1"
+                                        ref={this.cartRef0}
+                                        onMouseEnter={this.handleMouseOnCart0}
+                                        onMouseLeave={this.handleMouseLeave0}>
+                                        <img
+                                            src="/images/home-tshirt-1.png"
+                                            alt="rewarad by codes clever"
+                                            data-aos="fade-left"
+                                        />
+                                        <h2 className="cart-head">
+                                            Get your Gifts
+                                        </h2>
+                                        <p>
+                                            Get your Beautiful Gifts from
+                                            CodesClever Family now
+                                        </p>
+                                        <button className="getBtn">
+                                            <Link to="/rewardform">
+                                                Get Now
+                                            </Link>
+                                        </button>
+                                    </div>
+                                )}
                             </div>
                         </div>
                         <div className="event" data-aos="fade-left">
@@ -148,9 +212,7 @@ export default class Profile1 extends Component {
                                     className="cart-1"
                                     ref={this.cartRef1}
                                     onMouseEnter={this.handleMouseOnCart1}
-                                    onMouseLeave={this.handleMouseLeave1}
-                                    
-                                    >
+                                    onMouseLeave={this.handleMouseLeave1}>
                                     <img
                                         src="/images/event-cart-img.png"
                                         alt=""
@@ -162,22 +224,30 @@ export default class Profile1 extends Component {
                                         Enroll Now And Get Surprising Cash Prize
                                         And Beautiful Gifts ! <br />
                                         <br />
-                                        <strong> Fee: Rs: &#x20B9; 249(INR) </strong>
-                                        
+                                        <strong>
+                                            {" "}
+                                            Fee: Rs: &#x20B9; 249(INR){" "}
+                                        </strong>
                                     </p>
-                                    {this.state.enroll && <button onClick={this.handleAllReadyEnrolled} >Enrolled</button>}
-                                    {!this.state.enroll && <button> Competition over</button>}
+                                    {this.state.enroll && (
+                                        <button
+                                            onClick={
+                                                this.handleAllReadyEnrolled
+                                            }>
+                                            Enrolled
+                                        </button>
+                                    )}
+                                    {!this.state.enroll && (
+                                        <button> Competition over</button>
+                                    )}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             );
-        } 
-        else {
-            return(
-                <Logout/>
-            )
+        } else {
+            return <Logout />;
         }
     }
 }

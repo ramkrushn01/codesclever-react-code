@@ -34,6 +34,7 @@ import Saveqna from "./components/Saveqna";
 import Startexam from "./components/Startexam";
 import Exam from "./components/Exam";
 import Updateboard from "./components/Updateboard";
+import Rewardform from "./components/Rewardform";
 
 // import { webpack } from "webpack";
 // import webpack from './webpack.config';
@@ -223,8 +224,6 @@ function App() {
                         }
                     />
 
-
-
                     <Route
                         path="/saveqna"
                         element={
@@ -233,7 +232,7 @@ function App() {
                             </>
                         }
                     />
-{/* 
+                    {/* 
                     <Route
                         path="/exam"
                         element={
@@ -256,6 +255,14 @@ function App() {
                         element={
                             <>
                                 <Updateboard />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/rewardform"
+                        element={
+                            <>
+                                <Rewardform />
                             </>
                         }
                     />

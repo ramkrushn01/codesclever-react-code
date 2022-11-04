@@ -5,12 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Maindiv() {
     const styleQ = {
-        'font-size': '100px',
-        'color':'#00000054',
-        'font-family':'Cantora One !important'
-    }
+        "font-size": "20px",
+        color: "black",
+        "font-family": "Cantora One !important",
+    };
     const navigator = useNavigate();
-    
+
     return (
         <>
             <div className="mycontainer1">
@@ -48,7 +48,7 @@ export default function Maindiv() {
                         />
 
                         <div className="text-price">
-                        <h1 style={styleQ}>?</h1>
+                            <h1 style={styleQ}>KAVYA GUPTA</h1>
 
                             <p>Cash Prize of</p>
                             {/* <p>RS. 7,000</p> */}
@@ -64,7 +64,7 @@ export default function Maindiv() {
                         />
 
                         <div className="text-price">
-                        <h1 style={styleQ}>?</h1>
+                            <h1 style={styleQ}>KRISHNA GOYAL</h1>
 
                             <p>Cash Prize of</p>
                             {/* <p>RS. 10,000</p> */}
@@ -80,7 +80,7 @@ export default function Maindiv() {
                         />
 
                         <div className="text-price">
-                            <h1 style={styleQ}>?</h1>
+                            <h1 style={styleQ}>NISHCHAY SHARMA</h1>
                             <p>Cash Prize of</p>
                             {/* <p>RS. 5,000</p> */}
                             <h1>RS. 5,000</h1>
@@ -89,8 +89,15 @@ export default function Maindiv() {
                     </div>
                 </div>
                 <h2 className="winner-quote">
-                    <Link to='/startexam'>Start Competition</Link><br />
-                    <button className="rgbtn" onClick={()=>{navigator('/profile')}} >REGISTER NOW</button>
+                    {/* <Link to="/startexam">Start Competition</Link> */}
+                    <br />
+                    {/* <button
+                        className="rgbtn"
+                        onClick={() => {
+                            navigator("/profile");
+                        }}>
+                        REGISTER NOW
+                    </button> */}
                 </h2>
             </div>
         </>

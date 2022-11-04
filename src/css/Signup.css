@@ -1,6 +1,9 @@
 .container {
     /* background-color: black; */
     display: flex;
+    height: 100vh;
+    min-height: fit-content;
+    box-sizing: border-box;
     margin: auto;
     width: 70%;
     height: 100vh;
@@ -158,6 +161,7 @@ input:focus{
     .container {
         width: 100%;
         align-items: flex-start;
+        margin-bottom: 150px;
     }
 
     .singup-container-1 {
