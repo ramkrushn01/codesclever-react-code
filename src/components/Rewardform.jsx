@@ -10,6 +10,7 @@ import Notification from "./Notification";
 import authContext from "../context/auth/authContext";
 
 export default function Rewardform() {
+
     const context = useContext(authContext);
     const { logoutUser, loggedInUser } = context;
 
