@@ -48,6 +48,7 @@ function Navbar(props) {
                         }
                         alt="codesclever"></img>
                 </div>
+                
                 <p className="bar" id="bar" onClick={showNavBar}>
                     &#8801;
                     {/* <AiOutlineBars/> */}

@@ -24,7 +24,7 @@ export default function About() {
             <div className="aboutteam">
                 <div className="about-cart" data-aos="fade-left">
                     <img
-                        src="/images/ramkrushn salunkhe.jpg"
+                        src="/images/ramkrushn-salunkhe.jpg"
                         alt="ramkrushn salunkhe"
                     />
                     <h5 className="name">Ramkrushn Salunkhe</h5>
